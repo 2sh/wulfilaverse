@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         WulfilaVerse
-// @namespace    https://mafcadia.com/
+// @namespace    https://2sh.me/
 // @version      v1.0.0
 // @description  Add Wulfila.be links to BibleHub
 // @author       mafcadio
