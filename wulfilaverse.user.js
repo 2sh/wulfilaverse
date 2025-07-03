@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WulfilaVerse
 // @namespace    https://2sh.me/
-// @version      v1.0.0
+// @version      v1.1.0
 // @description  Add Wulfila.be links to BibleHub
 // @author       mafcadio
 // @match        https://biblehub.com/*
@@ -119,13 +119,22 @@
     {
       const [cStart, vStart] = c[0]
       const [cEnd, vEnd] = c[1]
-      if ((cStart < loc.chapter && loc.chapter < cEnd)
-        || (cStart == cEnd == loc.chapter
-          && vStart <= loc.verse && loc.verse <= vEnd)
-        || (cStart == loc.chapter && vStart <= loc.verse)
-        || (cEnd == loc.chapter && loc.verse <= vEnd)
-      ) return true
-      if (loc.chapter < cStart) return false
+      if (loc.chapter < cStart)
+        return false
+      if (cStart < loc.chapter && loc.chapter < cEnd)
+        return true
+      if (cStart == cEnd)
+      {
+        if (cStart == loc.chapter && vStart <= loc.verse && loc.verse <= vEnd)
+          return true
+      }
+      else
+      {
+        if (cStart == loc.chapter && vStart <= loc.verse)
+          return true
+        if (cEnd == loc.chapter && loc.verse <= vEnd)
+          return true
+      }
     }
     return false
   }
