@@ -83,7 +83,7 @@
     ],
     "colossians": [
       [[ 1, 16], [ 1, 29]],
-      [[ 2, 11], [ 4, 19]], // 4:19 is actually the end of 4:18
+      [[ 2, 11], [ 4, 19]], // 4:19 seems to be the end of 4:18
     ],
     "1 thessalonians": [
       [[ 2, 10], [ 5, 28]],
