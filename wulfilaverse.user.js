@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WulfilaVerse
 // @namespace    https://2sh.me/
-// @version      v2.0.0
+// @version      v2.1.0
 // @description  Add Wulfila.be links to BibleHub
 // @author       mafcadio
 // @match        https://biblehub.com/*
@@ -17,7 +17,7 @@
   const wulfileBeImage = `<img style='height: 20px;' src="data:image/png;base64,${wulfilaBeFavicon}">`
 
   const bibleHubFavicon = `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`
-  const bibleHubImage = `<img style='height: 20px;' src="data:image/png;base64,${bibleHubFavicon}">`
+  const bibleHubImage = `<img style='height: 15px;' src="data:image/png;base64,${bibleHubFavicon}">`
 
   const bookFragments = {
     "matthew": [
@@ -239,41 +239,70 @@
     }
   }
 
+  function createWulfilaBeLinks(loc)
+  {
+    const links = document.createElement('span')
+    links.style.margin = "5px"
+
+    const underscoreBook = loc.book
+      .replaceAll(" ", "_")
+
+    links.append((() =>
+    {
+      const link = document.createElement('a')
+      link.href = `https://biblehub.com/${underscoreBook}/${loc.chapter}-${loc.verse}.htm`
+      link.innerHTML = bibleHubImage
+      return link
+    })())
+    return links
+  }
+
   function processWulfilaBe()
   {
-    console.log(location.hostname)
     if (location.hostname != "www.wulfila.be") return
-    const results = document.getElementById('results')
-    const observer = new MutationObserver(() =>
+    if (window.location.pathname.startsWith("/gothic/browse/search/"))
     {
-      for (const el of results.querySelectorAll("dt a"))
+      const results = document.getElementById('results')
+      const observer = new MutationObserver(() =>
       {
-        if (el.dataset.linkAdded)
-          return
-
-        const matches = el.href.match(/..\/text\/([0-9]+)\/([0-9]+).html#V([0-9]+)/)
-        const book = getNameFromWulfilaBeBookNumber(parseInt(matches[1]))
-          .replace(' ', '_')
-        const chapter = parseInt(matches[2])
-        const verse = parseInt(matches[3])
-
-        const links = document.createElement('span')
-        links.style.margin = "5px"
-
-        links.append((() =>
+        for (const el of results.querySelectorAll("dt a"))
         {
-          const link = document.createElement('a')
-          link.href = `https://biblehub.com/${book}/${chapter}-${verse}.htm`
-          link.innerHTML = bibleHubImage
-          return link
-        })())
+          if (el.dataset.linkAdded)
+            return
 
-        el.insertAdjacentElement('afterend', links)
-        el.dataset.linkAdded = true
+          const matches = el.href.match(/\/text\/([0-9]+)\/([0-9]+).html#V([0-9]+)/)
+          const loc = {
+            book: getNameFromWulfilaBeBookNumber(parseInt(matches[1])),
+            chapter: parseInt(matches[2]),
+            verse: parseInt(matches[3]),
+          }
+
+          el.insertAdjacentElement('afterend',
+              createWulfilaBeLinks(loc))
+          el.dataset.linkAdded = true
+        }
+      })
+      observer.observe(results, {
+        attributes: true, childList: true, subtree: true });
+    }
+    else if (window.location.pathname.startsWith("/gothic/browse/text/"))
+    {
+      const matches = window.location.pathname
+        .match(/\/text\/([0-9]+)\/([0-9]+).html/)
+      for (const el of document.querySelectorAll("dl.text dt"))
+      {
+        const verseMatch = el.id.match(/([0-9]+)/)
+        const verse = parseInt(verseMatch[1])
+        if (verse < 1) continue
+        const loc = {
+          book: getNameFromWulfilaBeBookNumber(parseInt(matches[1])),
+          chapter: parseInt(matches[2]),
+          verse,
+        }
+
+        el.appendChild(createWulfilaBeLinks(loc))
       }
-    })
-    observer.observe(results, {
-      attributes: true, childList: true, subtree: true });
+    }
   }
 
   function run()
