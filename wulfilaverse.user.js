@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         WulfilaVerse
 // @namespace    https://2sh.me
-// @version      v3.0.1
-// @description  Add Wulfila.be links to BibleHub and BibleGateway.
+// @version      v3.0.2
+// @description  Add Wulfila.be links to BibleHub and BibleGateway
 // @author       2sh
 // @homepageURL  https://2sh.me
 // @supportURL   mailto:contact@2sh.me
@@ -11,6 +11,8 @@
 // @match        https://www.biblegateway.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=wulfila.be
 // @grant        none
+// @license      MPL-2.0; https://www.mozilla.org/en-US/MPL/2.0/
+// @copyright    2025, 2sh (https://2sh.me/)
 // ==/UserScript==
 
 (function() {
