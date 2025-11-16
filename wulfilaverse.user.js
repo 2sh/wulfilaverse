@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         WulfilaVerse
 // @namespace    https://2sh.me/
-// @version      v2.1.0
-// @description  Add Wulfila.be links to BibleHub
-// @author       mafcadio
+// @version      v3.0.0
+// @description  Add Wulfila.be links to BibleHub and BibleGateway
+// @author       2sh
 // @match        https://biblehub.com/*
 // @match        https://www.wulfila.be/*
+// @match        https://www.biblegateway.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=wulfila.be
 // @grant        none
 // ==/UserScript==
@@ -18,6 +19,9 @@
 
   const bibleHubFavicon = `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`
   const bibleHubImage = `<img style='height: 15px;' src="data:image/png;base64,${bibleHubFavicon}">`
+
+  const bibleGatewayFavicon = `iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8AAAAAMyd88wAAAAlwSFlzAAALEwAACxMBAJqcGAAAA6VJREFUaN7t2UtoXFUcx/HPTCe1SaqJ8YktF6vjs5suFG0VioILo5WiLsRVwcdCLoIuhKIL0YXiwk2HBvFB163PLrKo1ooI1Vqr1Sq13Ea90vqgjY3VxMRJ4qJn4BrGZPKYmUTyg4F7z5l7z/97zvk/7r05dVCpGOWwFIXQVMZInKTjcz1Wbo4MLmAlVuNarMIKLMc4BnEc3+EQvsaxOEn/bipAqRh14hbcjXXB6LOmuGw4wHyCt7A7TtKTDQUoFaM23IlHcAOWzXD8EXyGHrwdJ+npugOUitFqPImNaM10lfEr+pDi52BgOy4K22oVupCvsiq9eDZO0s/rAlAqRnlswPO4OtP1G97HO9iHYxiMk3Qsc+0SnI1Lw1a7CzcFH8mqL0zOjjhJR+cMIBiwKRh/fmgeDEb3YF+cpMPTmIx2rMejuBUtme5TeBpba3HyXI0hcRNeRGdoPoJn8GacpEOzCAIdeBBP4MJM1594ClumWoklUw3S3dVxO7ZkZv5DPBAn6bu9/QPl2USx3v6B4e6ujo9DaL0uM8ZS3Ijve/sHDs14BUrF6DK8gTWhaTcejpO0rw7Jby1eCXmkoqO4N07SL/7ruvwkN2zB4xnjDyCuh/EQJ+lePIafMs2XY3PwmekB4GbcH45PYHOcpIfVUXGS7sILyDrvBtwxLYBSMVoanOvc0PQq3tMYbQtbtaJWPFQqRudMZwXW4LZw/C1ezsb1Oq/CKWwNkaiidWFH1AzQjQvC8fY4SY9qrD7A3sx5GzaGZDo5QKkYLQ9JprL3dzbYeKEm2lnFJy+uZQVW4Mpw/BUOa44+ChNYUYSragGIQsEF++Mk/aNJAD+EX0XtuKYWgEtCTT+ObzRPv08AgCtqATgvZOiRCUml0X5Qxi8TmleGED8pQFvmYeO05mpihds5oXKtClAhHK1yg0ZrrMrkFqYCaMkAlJsMkJuq+MxPQT9qnut/DTAefgsOoOFGh8fWGalQpe3LUIecqHcYLRWjZbgP60vF6CC2hWp0VgDb8XpYiXqX0PeE0rk1jNWK52YFEOr+sQbtnuszL8fyWFsqRi3TeWeab7IPHsgky3F8Ot0Xvs0G2BG2a+Uhpmcuw2gjCrYh/BhOj+PkggKoUibkFjLAnOWBRmsXhnBwJkm06QBxku7BnnrUQgtCiwCLAJNrfKED5Bc6QGHRBxYBZl8fZTU60bEL8xzgiDNfRcvOfFHd79+fn+Y9wEt4Lcx6LqzAX9k//AO9aw7W30IjAAAAAABJRU5ErkJggg==`
+  const bibleGatewayImage = `<img style='height: 15px;' src="data:image/png;base64,${bibleGatewayFavicon}">`
 
   const bookFragments = {
     "matthew": [
@@ -128,6 +132,8 @@
         return false
       if (cStart < loc.chapter && loc.chapter < cEnd)
         return true
+      if (!loc.verse && (cStart == loc.chapter || loc.chapter == cEnd))
+        return true
       if (cStart == cEnd)
       {
         if (cStart == loc.chapter && vStart <= loc.verse && loc.verse <= vEnd)
@@ -179,8 +185,15 @@
   {
     const b = getWulfilaBeBookNumber(loc.book).toString().padStart(2, '0')
     const c = loc.chapter.toString().padStart(2, '0')
-    const v = loc.verse
-    return `https://www.wulfila.be/gothic/browse/text/${b}/${c}.html#V${v}`
+    if (loc.verse)
+    {
+      const v = loc.verse
+      return `https://www.wulfila.be/gothic/browse/text/${b}/${c}.html#V${v}`
+    }
+    else
+    {
+      return `https://www.wulfila.be/gothic/browse/text/${b}/${c}.html`
+    }
   }
 
   function createWulfilaBeLink(loc)
@@ -201,16 +214,28 @@
     return base
   }
 
+  function parseMatches(matches)
+  {
+    const bookNumber = matches[1] || matches[3] || ''
+    const bookString = matches[2].replace('_', ' ').toLowerCase()
+    const bookName = bookNumber ?
+      bookNumber + ' ' + bookString
+      : bookString
+    return {
+      book: (wulfilaBeBooks.find(b => b.startsWith(bookName)) || bookName),
+      chapter: matches[4],
+      verse: matches[5],
+    }
+  }
+
   function parseVerse(verseText)
   {
+    console.log(verseText)
     const matches = verseText.match(
-      /((?:[1-9][_ ])?[a-z]+?)[ \/]?([0-9]+)[:-]([0-9]+)/i)
+      /([1-9])?[_ ]?([a-z]+?)[_ ]?([1-9])?[ \/.]?([0-9]+)(?:[:.-]([0-9]+))?/i)
+    console.log(matches)
     if (!matches) return null
-    return {
-      book: matches[1].replace('_', ' ').toLowerCase(),
-      chapter: matches[2],
-      verse: matches[3],
-    }
+    return parseMatches(matches)
   }
 
   function processBibleHub()
@@ -239,10 +264,43 @@
     }
   }
 
+  function processBibleGateway()
+  {
+    if (location.hostname != "www.biblegateway.com") return
+
+    const passageTable = document.querySelector(".passage-table")
+    const passageTools = document.querySelector('.passage-tools')
+    if (passageTable && passageTools)
+    {
+      const osis = passageTable.getAttribute('data-osis')
+      const loc = parseVerse(osis)
+      if (loc)
+      {
+        if (osis.includes('-'))
+          // this is probably a full chapter so only link to book and chapter
+          delete loc.verse
+        passageTools.appendChild(createWulfilaBeLink(loc))
+      }
+    }
+
+    [...document.getElementsByClassName('bible-item')].forEach(element =>
+    {
+      const loc = parseVerse(element.getAttribute('data-osis'))
+      if (loc && checkVerse(loc))
+      {
+        const wLink = createWulfilaBeLink(loc)
+        const extrasElement = element.getElementsByClassName('bible-item-extras')[0]
+        extrasElement.appendChild(wLink)
+      }
+    })
+  }
+
   function createWulfilaBeLinks(loc)
   {
-    const links = document.createElement('span')
-    links.style.margin = "5px"
+    const links = document.createElement('div')
+    links.style.marginLeft = "5px"
+    links.style.display = "inline-flex"
+    links.style.gap = "5px"
 
     const underscoreBook = loc.book
       .replaceAll(" ", "_")
@@ -252,6 +310,14 @@
       const link = document.createElement('a')
       link.href = `https://biblehub.com/${underscoreBook}/${loc.chapter}-${loc.verse}.htm`
       link.innerHTML = bibleHubImage
+      return link
+    })())
+
+    links.append((() =>
+    {
+      const link = document.createElement('a')
+      link.href = `https://www.biblegateway.com/passage/?search=${loc.book}%20${loc.chapter}:${loc.verse}`
+      link.innerHTML = bibleGatewayImage
       return link
     })())
     return links
@@ -304,10 +370,10 @@
       }
     }
   }
-
   function run()
   {
     processBibleHub()
+    processBibleGateway()
     processWulfilaBe()
   }
 
