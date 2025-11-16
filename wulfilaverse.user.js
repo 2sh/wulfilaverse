@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         WulfilaVerse
-// @namespace    https://2sh.me/
-// @version      v3.0.0
-// @description  Add Wulfila.be links to BibleHub and BibleGateway
+// @namespace    https://2sh.me
+// @version      v3.0.1
+// @description  Add Wulfila.be links to BibleHub and BibleGateway.
 // @author       2sh
+// @homepageURL  https://2sh.me
+// @supportURL   mailto:contact@2sh.me
 // @match        https://biblehub.com/*
 // @match        https://www.wulfila.be/*
 // @match        https://www.biblegateway.com/*
