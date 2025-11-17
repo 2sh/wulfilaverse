@@ -1,7 +1,7 @@
 # WulfilaVerse
 
-A Userscript which adds Wulfila.be verse links to BibleHub and BibleGateway,
-but only if attested. Useful for finding phrases or Greek words in BibleHub,
+A Userscript which adds Wulfila.be verse links to Bible Hub and Bible Gateway,
+but only if attested. Useful for finding words and phrases on Bible Hub and Bible Gateway,
 immediately seeing if a verse is attested in Gothic and being presented
 with a Wulfila.be link when it is.
 The script also links to both BibleHub and Bible Gateway from Wulfila.be.
@@ -30,5 +30,5 @@ Locations of the Wulfila.be link on the individual verse pages on Bible Hub and 
 ![](/example_images/BibleHub-verse-page.png?raw=true "BibleHub verse page")
 ![](/example_images/Bible-Gateway-verse-page.png?raw=true "Bible Gateway verse page")
 
-Links to Bible Hub and BibleGateway are also added to verses on Wulfila.be for convenience.<br />
+Links to Bible Hub and Bible Gateway are also added to verses on Wulfila.be for convenience.<br />
 ![](/example_images/wulfila_be_links.png?raw=true "Links on Wulfila.be")
