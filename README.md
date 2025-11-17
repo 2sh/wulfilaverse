@@ -6,6 +6,14 @@ immediately seeing if a verse is attested in Gothic and being presented
 with a Wulfila.be link when it is.
 The script also links to both BibleHub and Bible Gateway from Wulfila.be.
 
+## Installation
+
+1. Install a userscript manager, such as Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
+
+2. Install the [WulfilaVerse](https://github.com/2sh/wulfilaverse/blob/master/wulfilaverse.user.js) userscript (will load in the installed userscript manager)
+
+## Examples
+
 Bible Hub's search looks through many different Bible English translations
 which helps finding phrases and grammar in Gothic.
 You can even put quotes around multiple words to keep them together.<br />
@@ -24,9 +32,3 @@ Links to Bible Hub and BibleGateway are also added to verses on Wulfila.be for c
 Locations of the Wulfila.be link on the individual verse pages on Bible Hub and Bible Gateway.<br />
 ![](/example_images/BibleHub-verse-page.png?raw=true "BibleHub verse page")
 ![](/example_images/Bible-Gateway-verse-page.png?raw=true "Bible Gateway verse page")
-
-## Installation
-
-1. Install a userscript manager, such as Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
-
-2. Install the [WulfilaVerse](https://github.com/2sh/wulfilaverse/blob/master/wulfilaverse.user.js) userscript (will load in the installed userscript manager)
