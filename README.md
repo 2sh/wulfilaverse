@@ -26,9 +26,9 @@ Also on Bible Gateway, in this case for Latin, but also for any other translatio
 on the site.<br />
 ![](/example_images/BibleGateway_search_latin.png?raw=true "BibleGateway Search")
 
-Links to Bible Hub and BibleGateway are also added to verses on Wulfila.be for convenience.<br />
-![](/example_images/wulfila_be_links.png?raw=true "Links on Wulfila.be")
-
 Locations of the Wulfila.be link on the individual verse pages on Bible Hub and Bible Gateway.<br />
 ![](/example_images/BibleHub-verse-page.png?raw=true "BibleHub verse page")
 ![](/example_images/Bible-Gateway-verse-page.png?raw=true "Bible Gateway verse page")
+
+Links to Bible Hub and BibleGateway are also added to verses on Wulfila.be for convenience.<br />
+![](/example_images/wulfila_be_links.png?raw=true "Links on Wulfila.be")
