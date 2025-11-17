@@ -10,7 +10,7 @@ The script also links to both BibleHub and Bible Gateway from Wulfila.be.
 
 1. Install a userscript manager, such as Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
 
-2. Install the [WulfilaVerse](https://github.com/2sh/wulfilaverse/blob/master/wulfilaverse.user.js) userscript (will load in the installed userscript manager)
+2. Install the [WulfilaVerse](https://github.com/2sh/wulfilaverse/raw/refs/heads/master/wulfilaverse.user.js) userscript (will load in the installed userscript manager)
 
 ## Examples
 
