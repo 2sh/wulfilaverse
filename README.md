@@ -12,7 +12,7 @@ The script also links to both BibleHub and Bible Gateway from Wulfila.be.
 
 2. Install the [WulfilaVerse](https://github.com/2sh/WulfilaVerse/raw/refs/heads/master/wulfilaverse.user.js) userscript (will load in the installed userscript manager)
 
-## Examples
+## Example Usage
 
 Bible Hub's search looks through many different Bible English translations
 which helps finding phrases and grammar in Gothic.
