@@ -19,7 +19,7 @@ which helps finding phrases and grammar in Gothic.
 You can even put quotes around multiple words to keep them together.<br />
 ![](/example_images/biblehub_search.png?raw=true "BibleHub Search")
 
-Through Bible Hub you can find out how specific words were translated into Gothic.<br />
+Through Bible Hub you can find out how specific Greek words were translated into Gothic.<br />
 ![](/example_images/BibleHub-Greek-concordance.png?raw=true "BibleHub Greek words")
 
 Also on Bible Gateway, in this case for Latin, but also for any other translations
